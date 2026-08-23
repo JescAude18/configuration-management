@@ -1,0 +1,32 @@
+---
+
+- name: Update cache
+  ansible.builtin.apt:
+    update_cache: yes
+
+- name: Update server
+  ansible.builtin.apt:
+    upgrade: dist
+
+- name: Install utilities
+  ansible.builtin.apt:
+    name:
+      - fail2ban
+      - apt-transport-https
+      - ca-certificates
+      - curl
+      - unzip
+      - tar
+      - sudo
+      - wget
+      - ssh
+    state: present
+
+- name: Remove dependencies that are no longer required and purge their configuration files
+  ansible.builtin.apt:
+    autoremove: yes
+    purge: true
+
+- name: Run "apt-get clean"
+  ansible.builtin.apt:
+    clean: yes
