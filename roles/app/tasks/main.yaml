@@ -1,0 +1,11 @@
+---
+
+- name: Upload static HTML website to server
+  ansible.builtin.copy:
+    src: website.tar.gz
+    dest: /var/www/roadmap/website.tar.gz
+
+- name: Unzip the tarball
+  ansible.builtin.unarchive:
+    src: /var/www/roadmap/website.tar.gz
+    dest: /var/www/roadmap/
