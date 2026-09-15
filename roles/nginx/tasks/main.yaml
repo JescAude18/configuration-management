@@ -8,11 +8,6 @@
     path: /var/www/roadmap/
     state: directory
 
-- name: Copy 'index.html' file to server
-  ansible.builtin.copy:
-    src: index.html
-    dest: /var/www/roadmap/index.html
-
 - name: Copy nginx.conf template to server
   ansible.builtin.template:
     src: nginx.conf.j2
