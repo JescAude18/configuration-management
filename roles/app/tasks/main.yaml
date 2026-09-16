@@ -9,3 +9,4 @@
   ansible.builtin.unarchive:
     src: /var/www/roadmap/website.tar.gz
     dest: /var/www/roadmap/
+    remote_src: true
