@@ -5,3 +5,8 @@
   hosts: droplet_do
   roles:
     - base
+
+- name: nginx
+  hosts: droplet_do
+  roles:
+    - nginx
