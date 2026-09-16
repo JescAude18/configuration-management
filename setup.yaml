@@ -1,7 +1,6 @@
 ---
 
 - name: base
-  become: true
   hosts: droplet_do
   roles:
     - base
