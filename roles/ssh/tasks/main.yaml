@@ -1,0 +1,7 @@
+---
+
+- name: Add a given public key to the server
+  ansible.posix.authorized_key:
+    user: root
+    state: present
+    key: "{{ lookup('file', '/home/jescaude/.ssh/roadmapsh_key1.pub') }}"
