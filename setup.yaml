@@ -4,18 +4,6 @@
   hosts: droplet_do
   roles:
     - base
-
-- name: nginx
-  hosts: droplet_do
-  roles:
     - nginx
-
-- name: app
-  hosts: droplet_do
-  roles:
     - app
-
-- name: ssh
-  hosts: droplet_do
-  roles:
     - ssh
