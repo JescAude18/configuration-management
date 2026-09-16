@@ -10,3 +10,8 @@
   hosts: droplet_do
   roles:
     - nginx
+
+- name: app
+  hosts: droplet_do
+  roles:
+    - app
